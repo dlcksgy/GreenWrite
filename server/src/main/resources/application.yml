@@ -1,1 +1,35 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://database-1.c0ibsblt2h8v.us-west-1.rds.amazonaws.com:3306/GREENWRITE
+    username: GW0529
+    password: GW0529!!
 
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    open-in-view: false
+    show-sql: true
+    hibernate:
+      format-sql: true
+      ddl-auto: none
+
+  thymeleaf:
+    cache: false
+    prefix: file:src/main/resources/templates/
+  web:
+    resources:
+      static-locations:
+      - file:src/main/resources/static/
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+    error:
+      include-exception: false
+      include-stacktrace: never
+      whitelabel:
+        enabled: false    
